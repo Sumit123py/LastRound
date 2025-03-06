@@ -1,5 +1,5 @@
 "use client";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
 import { useRef } from "react";
 import ButtonAnimation from "./ButtonAnimation";
 
@@ -13,7 +13,7 @@ function AnimatedWord({
   word: string;
   start: number;
   end: number;
-  scrollYProgress: any;
+  scrollYProgress: MotionValue<number>;
 }) {
   const y = useTransform(scrollYProgress, [start, end], [20, 0]);
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);

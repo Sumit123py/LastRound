@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TextAnimation from "./components/TextAnimation";
 
 export default function Home() {
